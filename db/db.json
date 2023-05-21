@@ -1,12 +1,1 @@
-[
-  {
-    "title": "About to delete",
-    "text": "Yes yes",
-    "id": "b12d9342-c539-47ab-b79a-717c48d6dc59"
-  },
-  {
-    "title": "Hi",
-    "text": "Second note",
-    "id": "bdc5db32-184e-4465-8dc4-a62173410c77"
-  }
-]
+[{"title":"Grocery Shopping","text":"Buy bread, milk, cheese, tomatos, bananas","id":"d9370e2b-f27c-4f0c-ba17-7ae5979bb0bb"},{"title":"Tidy Office","text":"Vacuum Carpet","id":"78d0b12f-2a70-450d-abaa-e1745b399ed3"},{"title":"Pay Tax","text":"Do funds transfer by midday","id":"da7478f9-8098-484c-ba96-abec5fca6a95"}]

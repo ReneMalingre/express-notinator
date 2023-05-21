@@ -46,7 +46,7 @@ const saveNote = (note) =>
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log('Success in saving note:', data)
+      // console.log('Success in saving note:', data)
     })
     .catch((error) => {
       console.error('Error in POST request:', error)
@@ -61,7 +61,7 @@ const deleteNote = (id) =>
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log('Success in deleting note:', data)
+      // console.log('Success in deleting note:', data)
     })
     .catch((error) => {
       console.error('Error in DELETE request:', error)
@@ -96,7 +96,6 @@ const handleNoteSave = () => {
 
 // Delete the clicked note
 const handleNoteDelete = (e) => {
-  console.log('handleNoteDelete')
   // Prevents the click listener for the list from being called when the button inside of it is clicked
   e.stopPropagation()
 
@@ -198,6 +197,7 @@ const renderNoteList = async (notes) => {
 // Gets notes from the db and renders them to the sidebar
 const getAndRenderNotes = () => getNotes().then(renderNoteList)
 
+// create event listeners for the notes.html file
 if (window.location.pathname === '/notes.html') {
   saveNoteBtn.addEventListener('click', handleNoteSave)
   newNoteBtn.addEventListener('click', handleNewNoteView)
@@ -205,6 +205,8 @@ if (window.location.pathname === '/notes.html') {
   noteText.addEventListener('keyup', handleRenderSaveBtn)
 }
 
+// ensure that the activeNote object is valid, to avoid errors
+// upon clicking the placeholder note
 function isValidObjectActiveNote () {
   if (activeNote === null) return false
   if (typeof activeNote !== 'object') return false
@@ -212,4 +214,5 @@ function isValidObjectActiveNote () {
   return 'id' in activeNote
 }
 
+// call the getAndRenderNotes function once on page load to display the list of notes
 getAndRenderNotes()

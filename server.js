@@ -38,7 +38,7 @@ app.use(express.static('public'))
 
 // respond to requests
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'))
+  res.sendFile(path.join(__dirname, './public/index.html'))
 })
 
 // return all notes
@@ -84,11 +84,10 @@ app.delete('/api/notes/:id', (req, res) => {
     const deletedNote = notesData.filter((note) => note.id === req.params.id)
     // remove the deleted note from the array of notes
     const index = notesData.findIndex(item => item.id === req.params.id)
-    console.log(notesData)
     if (index !== -1) {
       notesData.splice(index, 1)
     }
-    console.log(notesData)
+
     // return the new notesData array and a success message
     res.json({
       msg: `Note ${deletedNote[0].title} has been deleted`,

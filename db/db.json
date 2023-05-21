@@ -1,1 +1,12 @@
-[{"title":"About to delete","text":"Yes yes","id":"b12d9342-c539-47ab-b79a-717c48d6dc59"}]
+[
+  {
+    "title": "About to delete",
+    "text": "Yes yes",
+    "id": "b12d9342-c539-47ab-b79a-717c48d6dc59"
+  },
+  {
+    "title": "Hi",
+    "text": "Second note",
+    "id": "bdc5db32-184e-4465-8dc4-a62173410c77"
+  }
+]
